@@ -126,12 +126,12 @@ export const headerConfig: HeaderConfig = {
   },
   hero: {
     primaryCta: {
-      text: "Talk to IDPrivacy",
+      text: "Talk to VX",
       url: "/#demo"
     },
     secondaryCta: {
       text: "Book a Demo",
-      url: "https://www.idprivacy.ai/contact",
+      url: "/contact",
       icon: true
     }
   }

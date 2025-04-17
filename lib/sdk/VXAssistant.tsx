@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react';
-import { IDPrivacyClient, AudioStatus, ConversationResponse } from './idprivacy-client';
+import { VXClient, AudioStatus, ConversationResponse } from './vx-client';
 
-export interface IDPrivacyAssistantProps {
+export interface VXAssistantProps {
   // Required props
   apiKey: string;
   industry: string;
@@ -24,12 +24,12 @@ export interface IDPrivacyAssistantProps {
 }
 
 /**
- * IDPrivacy Voice Assistant React Component
+ * VX Voice Assistant React Component
  * 
  * A React component that provides a complete voice assistant interface
- * using the IDPrivacy Voice Assistant API.
+ * using the VX Voice Assistant API.
  */
-export const IDPrivacyAssistant: React.FC<IDPrivacyAssistantProps> = ({
+export const VXAssistant: React.FC<VXAssistantProps> = ({
   apiKey,
   apiBaseUrl,
   industry,
@@ -50,7 +50,7 @@ export const IDPrivacyAssistant: React.FC<IDPrivacyAssistantProps> = ({
   const [audioStatus, setAudioStatus] = useState<AudioStatus>('idle');
   const [error, setError] = useState<string | null>(null);
   const [conversationData, setConversationData] = useState<ConversationResponse | null>(null);
-  const clientRef = useRef<IDPrivacyClient | null>(null);
+  const clientRef = useRef<VXClient | null>(null);
   
   // Initialize the client
   useEffect(() => {
@@ -59,7 +59,7 @@ export const IDPrivacyAssistant: React.FC<IDPrivacyAssistantProps> = ({
       return;
     }
     
-    clientRef.current = new IDPrivacyClient({
+    clientRef.current = new VXClient({
       apiKey,
       apiBaseUrl,
       debug: clientOptions?.debug || debug,
@@ -227,7 +227,7 @@ export const IDPrivacyAssistant: React.FC<IDPrivacyAssistantProps> = ({
         <div style={baseModalStyle}>
           {/* Header */}
           <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '16px' }}>
-            <div style={{ fontWeight: 'bold' }}>IDPrivacy Assistant</div>
+            <div style={{ fontWeight: 'bold' }}>VX Assistant</div>
             <button
               onClick={handleClose}
               style={{
@@ -322,4 +322,4 @@ const CloseIcon = () => (
 // Helper for canvas ref
 const canvasRef = React.createRef<HTMLCanvasElement>();
 
-export default IDPrivacyAssistant; 
+export default VXAssistant; 
