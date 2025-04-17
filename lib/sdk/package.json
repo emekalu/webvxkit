@@ -1,0 +1,58 @@
+{
+  "name": "idprivacy-react-sdk",
+  "version": "1.0.0",
+  "description": "React SDK for the IDPrivacy Voice Assistant",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "test": "jest",
+    "lint": "eslint src --ext .ts,.tsx",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "voice",
+    "assistant",
+    "ai",
+    "retell",
+    "idprivacy",
+    "react",
+    "sdk"
+  ],
+  "author": "IDPrivacy",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/idprivacy/idprivacy-react-sdk.git"
+  },
+  "homepage": "https://idprivacy.ai",
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "dependencies": {
+    "retell-client-js-sdk": "^1.1.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^8.3.2",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.27.0",
+    "@typescript-eslint/parser": "^5.27.0",
+    "eslint": "^8.16.0",
+    "eslint-plugin-react": "^7.30.0",
+    "eslint-plugin-react-hooks": "^4.5.0",
+    "jest": "^28.1.0",
+    "rollup": "^2.75.5",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-terser": "^7.0.2",
+    "typescript": "^4.7.2"
+  }
+} 
